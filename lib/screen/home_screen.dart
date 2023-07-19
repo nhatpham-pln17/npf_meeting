@@ -119,8 +119,9 @@ class VideoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: ZegoUIKitPrebuiltVideoConference(
+    return Scaffold(
+      appBar: AppBar(title: Text('Room ID: $conferenceID')),
+      body: ZegoUIKitPrebuiltVideoConference(
         appID: appID,
         appSign: appSign,
         conferenceID: conferenceID,
