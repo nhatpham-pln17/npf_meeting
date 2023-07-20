@@ -137,7 +137,14 @@ class VideoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Room ID: $conferenceID')),
+      appBar: AppBar(
+          title: Text(
+        'Room ID: $conferenceID',
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      )),
       body: ZegoUIKitPrebuiltVideoConference(
         appID: appID,
         appSign: appSign,
