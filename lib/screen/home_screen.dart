@@ -13,7 +13,8 @@ final String ramdomConferenceId =
         .toString()
         .padLeft(10, '0');
 const imageSrc =
-    'https://www.zegocloud.com/_nuxt/img/pic_videoconference@2x.c50d1d2.png';
+    'https://50wheel.com/wp-content/uploads/2020/03/9-questions-to-ask-about-web-conferencing-software-1620x800.png';
+//'https://www.zegocloud.com/_nuxt/img/pic_videoconference@2x.c50d1d2.png';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -43,18 +44,34 @@ class HomeScreen extends StatelessWidget {
               imageSrc,
               width: MediaQuery.of(context).size.width * 0.8,
             ),
-            Text('Your UserId: $userId'),
-            const Text('Test meeeting with 2 devices or more!'),
+            const SizedBox(height: 20),
+            Text(
+              'Your UserId: $userId',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            const Text(
+              'Test meeeting with 2 devices or more!',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             const SizedBox(height: 20),
             TextFormField(
               maxLength: 20,
               keyboardType: TextInputType.number,
               controller: conferenceIdController,
               decoration: const InputDecoration(
-                labelText: 'Join a meeting by Input and Conference ID!',
+                labelText: 'Room ID!',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
-                    Radius.circular(10),
+                    Radius.circular(5),
                   ),
                 ),
               ),
